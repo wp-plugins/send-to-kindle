@@ -7,13 +7,13 @@ Stable tag: 1.0.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allow readers to enjoy your blog anytime, everywhere on their Kindle devices and
-free reading apps.
+The Send to Kindle Button lets readers enjoy your blog anytime, everywhere on
+their Kindle devices and free reading apps.
 
 == Description ==
 
-The Send to Kindle Button enables your readers to send content to their Kindle
-devices and apps continue reading later.
+Adding this button to your site opens it up to millions of Kindle customers that
+want to enjoy your blog on their Kindle.
 
 = Features =
 
