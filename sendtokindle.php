@@ -130,7 +130,7 @@ class STK_Button {
 
 		// enqueue and attach the button javascript
 		wp_enqueue_script( 'kindle_script', ( is_ssl() ? 'https' : 'http' ) .
-			'://d1xnn692s7u6t6.cloudfront.net/widget.js', false, null );
+			'://d1xnn692s7u6t6.cloudfront.net/widget.js', false, null, true );
 		global $wp_scripts;
 		$wp_scripts->add_data( 'kindle_script', 'data', $js );
 

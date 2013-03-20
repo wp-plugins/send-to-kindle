@@ -81,5 +81,9 @@ extracted and exactly how you want to design your button.
 
 == Changelog ==
 
+= 1.0.1 =
+* Changed the script to being included in the footer to prevent initialization
+before the button has appeared on the page.
+
 = 1.0.0 =
 * Initial release!
