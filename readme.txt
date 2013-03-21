@@ -3,7 +3,7 @@ Contributors: dskidmor
 Tags: amazon, kindle, reader, sharing, reading, news, sending, plugin
 Requires at least: 3.1
 Tested up to: 3.5.1
-Stable tag: 1.0.1
+Stable tag: 1.0.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ want to enjoy your blog on their Kindle.
 
 Use the built-in WordPress plugin installer to automatically put everything in
 the right place. If you prefer to install plugins manually, put Send to Kindle
-with your other plugins: `wp-content/plugins/sendtokindle/`
+with your other plugins: `wp-content/plugins/send-to-kindle/`
 
 To activate Send to Kindle, look inside the admin panel for the "Plugins" tab.
 By clicking "Activate" you agree to the [Send to Kindle Terms of
@@ -80,6 +80,9 @@ will look on your blog with the live preview feature.
 extracted and exactly how you want to design your button.
 
 == Changelog ==
+
+= 1.0.2 =
+* Improved the button display for certain WordPress themes.
 
 = 1.0.1 =
 * Changed the script to being included in the footer to prevent initialization
