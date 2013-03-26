@@ -3,7 +3,7 @@
 Plugin Name: Amazon Send to Kindle
 Plugin URI: http://wordpress.org/extend/plugins/send-to-kindle/
 Description: Allow readers to enjoy your blog anytime, everywhere on their Kindle devices and free reading apps.
-Version: 1.0.1
+Version: 1.0.2
 Author: Amazon.com, Inc.
 Author URI: https://www.amazon.com/gp/sendtokindle/
 License: GPLv2
