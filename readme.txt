@@ -81,6 +81,9 @@ extracted and exactly how you want to design your button.
 
 == Changelog ==
 
+= 1.0.3 =
+* Fix to prevent the button from appearing in blog search results.
+
 = 1.0.2 =
 * Improved the button display for certain WordPress themes.
 

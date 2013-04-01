@@ -154,6 +154,11 @@ class STK_Button {
 			return $content;
 		}
 
+		// Do not display the button content in search results.
+		if ( is_search() ) {
+			return $content;
+		}
+
 		// Ensure the correct page type
 		if ( ( is_home() && ! $settings['home'] ) ||
 				( is_archive() && ! $settings['archive'] ) ||
