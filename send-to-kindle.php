@@ -3,7 +3,7 @@
 Plugin Name: Amazon Send to Kindle
 Plugin URI: http://wordpress.org/extend/plugins/send-to-kindle/
 Description: Allow readers to enjoy your blog anytime, everywhere on their Kindle devices and free reading apps.
-Version: 1.0.2
+Version: 1.0.3
 Author: Amazon.com, Inc.
 Author URI: https://www.amazon.com/gp/sendtokindle/
 License: GPLv2
@@ -73,6 +73,7 @@ class STK_Button {
 		add_action( 'plugins_loaded', array( $this, 'load_l18n' ) );
 		add_shortcode( 'sendtokindle', array( $this, 'get_button_html' ) );
 		add_filter( 'the_content', array( $this, 'attach_to_content' ) );
+		add_filter( 'get_the_excerpt', array( $this, 'clean_the_excerpt' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_script' ) );
 		if ( is_admin() ) {
 			// Only load settings screens for admins.
@@ -175,6 +176,25 @@ class STK_Button {
 		}
 
 		return $content;
+	}
+
+	/**
+	 * Ensures the button is not accidentally inserted into the post excerpt. If
+	 * users do not define an excerpt (which is most of the time), by default
+	 * the first 55 words of the post content is used. This filter will strip
+	 * out the button text if it appears first.
+	 *
+	 * If custom HTML is being used, this is likely to become useless.
+	 *
+	 * @param string $excerpt post summary string
+	 * @return filtered string with the button text removed
+	 */
+	public function clean_the_excerpt( $excerpt ) {
+		// figure out what text to replace
+		$text = wp_strip_all_tags( $this->get_button_html() );
+
+		// perform the replacement using the localized button text
+		return preg_replace( "/^($text)([^\W])/i", '$2', $excerpt );
 	}
 
 	/**

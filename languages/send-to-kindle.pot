@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Amazon Send to Kindle package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Amazon Send to Kindle 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/sendtokindle\n"
-"POT-Creation-Date: 2013-03-16 20:27:50+00:00\n"
+"Project-Id-Version: Amazon Send to Kindle 1.0.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/send-to-kindle\n"
+"POT-Creation-Date: 2013-04-22 20:13:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -204,12 +204,12 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: admin/settings.php:76 jetpack.php:58 jetpack.php:77 sendtokindle.php:208
+#: admin/settings.php:76 jetpack.php:58 jetpack.php:77 send-to-kindle.php:233
 msgid "Kindle"
 msgstr ""
 
 #: admin/settings.php:77 admin/settings.php:291 jetpack.php:79
-#: sendtokindle.php:210
+#: send-to-kindle.php:235
 msgid "Send to Kindle"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgid ""
 "text and icon."
 msgstr ""
 
-#: sendtokindle.php:113
+#: send-to-kindle.php:114
 msgid "Settings"
 msgstr ""
 
