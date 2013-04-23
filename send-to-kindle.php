@@ -150,13 +150,14 @@ class STK_Button {
 	 * @return string revised content with the Send to Kindle Button inserted
 	 */
 	public function attach_to_content( $content ) {
+		// make sure there is content to attach to and settings to use
 		$settings = get_option( 'stk_button_look' );
-		if ( ! ( $content || $settings ) ) {
+		if ( ! ( $content && $settings ) ) {
 			return $content;
 		}
 
-		// Do not display the button content in search results.
-		if ( is_search() ) {
+		// Do not display the button in search results or RSS feeds.
+		if ( is_search() || is_feed() ) {
 			return $content;
 		}
 
@@ -168,6 +169,7 @@ class STK_Button {
 			return $content;
 		}
 
+		// Looks like we can do the actual attachment.
 		if ( $settings['before'] ) {
 			$content = $this->get_button_html() . $content;
 		}
@@ -183,8 +185,6 @@ class STK_Button {
 	 * users do not define an excerpt (which is most of the time), by default
 	 * the first 55 words of the post content is used. This filter will strip
 	 * out the button text if it appears first.
-	 *
-	 * If custom HTML is being used, this is likely to become useless.
 	 *
 	 * @param string $excerpt post summary string
 	 * @return filtered string with the button text removed
