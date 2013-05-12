@@ -70,7 +70,8 @@ class STK_Button {
 		) );
 
 		// Register actions and filters.
-		add_action( 'plugins_loaded', array( $this, 'load_l18n' ) );
+		load_plugin_textdomain( function_exists( 'wpcom_is_vip' ) ? 'default' : 'kindle',
+				false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		add_shortcode( 'sendtokindle', array( $this, 'get_button_html' ) );
 		add_filter( 'the_content', array( $this, 'attach_to_content' ) );
 		add_filter( 'get_the_excerpt', array( $this, 'clean_the_excerpt' ) );
@@ -238,17 +239,6 @@ class STK_Button {
 		$html .= '</div>';
 
 		return $html;
-	}
-
-	/**
-	 * Loads the localized MO for translating strings.
-	 *
-	 * @uses load_plugin_textdomain
-	 */
-	public function load_l18n() {
-		$textdomain = function_exists( 'wpcom_is_vip' ) ? 'default' : 'kindle';
-		load_plugin_textdomain( $textdomain, false,
-				basename( dirname( __FILE__ ) ) ) . '/languages/';
 	}
 }
 

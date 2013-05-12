@@ -62,14 +62,14 @@
 
 		// button text
 		$('#text').change(function () {
-			var text = $('#text option:selected').text();
-			if (text === 'None') {
+			var selected = $('#text option:selected');
+			if (selected.val() === 'none') {
 				$('.kindleWidget span').remove();
 			} else {
 				if ($('.kindleWidget > span').length === 0) {
 					$('.kindleWidget').append('<span>');
 				}
-				$('.kindleWidget > span').text(text);
+				$('.kindleWidget > span').text(selected.text());
 			}
 		});
 
